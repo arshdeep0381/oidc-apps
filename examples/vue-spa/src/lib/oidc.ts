@@ -46,7 +46,7 @@ type LoginParams = {
 export const login = async (params?: LoginParams) => {
   const as = await getAuthorizationServer()
 
-  const scope = params?.scope || 'openid email'
+  const scope = params?.scope || 'openid email roles'
   let redirectUri = params?.redirectUri
   if (!redirectUri && Array.isArray(client.redirect_uris) && client.redirect_uris.length > 1) {
     redirectUri = client.redirect_uris[0]?.toString()
