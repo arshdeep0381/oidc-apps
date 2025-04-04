@@ -17,15 +17,10 @@ export default function Home() {
         <p className="mt-4 max-w-lg text-lg text-slate-700">
           Library Application using OpenID Connect Protocol.
         </p>
-        <p>
-          {{user}}
-        </p>
-        {isAuthenticated ? (
-          
+        {isAuthenticated ? (          
           <Button onClick={() => signOut()}>
             Logout
-          </Button>
-          
+          </Button>          
         ) : (
           <Button onClick={() => signIn('testid')}>
             Login with ArmureAM
