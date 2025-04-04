@@ -18,17 +18,14 @@ export default function Home() {
           Library Application using OpenID Connect Protocol.
         </p>
         <p>
+          {user}
         </p>
         {isAuthenticated ? (
-          <>
-          <h3>User Details</h3>
-          <p>
-            {user}
-          </p>
+          
           <Button onClick={() => signOut()}>
             Logout
           </Button>
-          </>
+          
         ) : (
           <Button onClick={() => signIn('testid')}>
             Login with ArmureAM
