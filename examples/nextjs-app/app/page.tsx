@@ -18,7 +18,7 @@ export default function Home() {
           Library Application using OpenID Connect Protocol.
         </p>
         <p>
-          {user}
+          {{user}}
         </p>
         {isAuthenticated ? (
           
